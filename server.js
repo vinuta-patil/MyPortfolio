@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +13,18 @@ console.log('Starting server...');
 console.log('PORT from environment:', process.env.PORT);
 console.log('Using PORT:', PORT);
 console.log('Current directory:', __dirname);
+
+// Check if dist folder exists
+const distPath = path.join(__dirname, 'dist');
+console.log('Checking dist folder at:', distPath);
+if (fs.existsSync(distPath)) {
+  console.log('✅ dist folder exists');
+  const files = fs.readdirSync(distPath);
+  console.log('Files in dist:', files);
+} else {
+  console.error('❌ dist folder does NOT exist!');
+  console.error('Available files in current directory:', fs.readdirSync(__dirname));
+}
 
 // Serve static files from the dist directory
 app.use(express.static(path.join(__dirname, 'dist')));
