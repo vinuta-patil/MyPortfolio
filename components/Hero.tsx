@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function Hero() {
@@ -114,27 +114,40 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            className="flex gap-4 justify-center mb-12"
+            className="flex flex-col items-center gap-6 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
           >
-            {[
-              { Icon: Github, href: "https://github.com/vinuta-patil", label: "GitHub" },
-              { Icon: Linkedin, href: "https://www.linkedin.com/in/vinuta-patil-3a35741a2/", label: "LinkedIn" },
-              { Icon: Mail, href: "mailto:vinuta.patil@sjsu.edu", label: "Email" },
-            ].map(({ Icon, href, label }) => (
-              <motion.a
-                key={label}
-                href={href}
-                className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-cyan-400/50 transition-colors"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                aria-label={label}
-              >
-                <Icon className="w-6 h-6" />
-              </motion.a>
-            ))}
+            <div className="flex gap-4 justify-center">
+              {[
+                { Icon: Github, href: "https://github.com/vinuta-patil", label: "GitHub" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/vinuta-patil-3a35741a2/", label: "LinkedIn" },
+                { Icon: Mail, href: "mailto:vinuta.patil@sjsu.edu", label: "Email" },
+              ].map(({ Icon, href, label }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  className="p-3 bg-white/5 border border-white/10 rounded-lg hover:border-cyan-400/50 transition-colors"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label={label}
+                >
+                  <Icon className="w-6 h-6" />
+                </motion.a>
+              ))}
+            </div>
+
+            <motion.a
+              href="/resume.pdf"
+              download="Vinuta_Patil_Resume.pdf"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
