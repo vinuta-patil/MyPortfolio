@@ -8,6 +8,11 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+console.log('Starting server...');
+console.log('PORT from environment:', process.env.PORT);
+console.log('Using PORT:', PORT);
+console.log('Current directory:', __dirname);
+
 // Serve static files from the dist directory
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -17,5 +22,6 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`✅ Server is running on http://0.0.0.0:${PORT}`);
+  console.log(`✅ Ready to accept connections`);
 });
