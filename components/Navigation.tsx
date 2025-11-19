@@ -37,10 +37,14 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <motion.div
-            className="text-2xl font-mono"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-cyan-400">VP</span>
+            <img
+              src="/vplogo.png"
+              alt="VP Logo"
+              className="h-12 w-auto object-contain"
+            />
           </motion.div>
 
           {/* Desktop Menu */}
