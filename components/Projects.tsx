@@ -68,7 +68,7 @@ export function Projects() {
       github: "https://github.com/vinuta-patil",
     },
     {
-      title: "Restaurant Finding System",
+      title: "Restaurant Finder System",
       description:
         "Location-aware restaurant finder with JWT-based authentication and role-based access control. Built with Spring Boot REST APIs, Hibernate/JPA, and Redis caching. Deployed horizontally scalable on AWS EC2 behind an Elastic Load Balancer with 35% reduction in API response latency.",
       tags: ["Java", "Spring Boot", "React.js", "PostgreSQL", "AWS EC2", "Redis", "Docker", "JUnit"],
@@ -78,6 +78,42 @@ export function Projects() {
       bgImage: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
       link: "#",
       github: "https://github.com/vinuta-patil/Restaurant-Finder-System",
+    },
+    {
+      title: "Workout Tracker",
+      description:
+        "Full-stack MERN application enabling users to log, track, and manage workouts efficiently. Features secure JWT authentication, real-time updates via React Context API, and automated AWS EC2 deployment with GitHub webhooks.",
+      tags: ["React", "Node.js", "MongoDB", "Express", "AWS EC2", "JWT"],
+      gradient: "from-green-500 to-teal-500",
+      borderColor: "green-400/20",
+      hoverBorderColor: "green-400/40",
+      bgImage: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+      link: "#",
+      github: "https://github.com/vinuta-patil/Workout_Tracker",
+    },
+    {
+      title: "Food Allergy Checker",
+      description:
+        "Web application designed to check food items against user allergies and dietary preferences. Built with Python Flask backend and HTML frontend for real-time food safety validation.",
+      tags: ["Python", "Flask", "HTML", "Food Safety"],
+      gradient: "from-yellow-500 to-orange-500",
+      borderColor: "yellow-400/20",
+      hoverBorderColor: "yellow-400/40",
+      bgImage: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&q=80",
+      link: "#",
+      github: "https://github.com/vinuta-patil/Food-Allergy-Checker",
+    },
+    {
+      title: "Brain Tumor Detection",
+      description:
+        "Deep learning application using CNN for classifying brain MRI scans to detect tumors. Features a Flask web interface for real-time predictions with TensorFlow/Keras backend processing 64x64 RGB images.",
+      tags: ["Python", "TensorFlow", "Keras", "Flask", "OpenCV", "CNN"],
+      gradient: "from-indigo-500 to-purple-500",
+      borderColor: "indigo-400/20",
+      hoverBorderColor: "indigo-400/40",
+      bgImage: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80",
+      link: "#",
+      github: "https://github.com/vinuta-patil/Brain-Tumor-Detection",
     },
   ];
 
