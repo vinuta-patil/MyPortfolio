@@ -123,7 +123,7 @@ export function Hero() {
               {[
                 { Icon: Github, href: "https://github.com/vinuta-patil", label: "GitHub" },
                 { Icon: Linkedin, href: "https://www.linkedin.com/in/vinuta-patil-3a35741a2/", label: "LinkedIn" },
-                { Icon: Mail, href: "mailto:vinuta.patil@sjsu.edu", label: "Email" },
+                { Icon: Mail, href: "mailto:vinutapatil07@gmail.com", label: "Email" },
               ].map(({ Icon, href, label }) => (
                 <motion.a
                   key={label}

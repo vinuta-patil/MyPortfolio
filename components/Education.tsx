@@ -25,23 +25,33 @@ export function Education() {
 
   const certifications = [
     {
+      title: "Microsoft Azure AI Essentials Professional Certificate",
+      issuer: "Microsoft & LinkedIn Learning",
+      date: "Feb 2026",
+      description: "Covers Machine Learning, Azure AI Studio, and Generative AI fundamentals",
+    },
+    {
+      title: "Docker Foundations Professional Certificate",
+      issuer: "Docker & LinkedIn Learning",
+      date: "Feb 2026",
+      description: "Covers containerization and Docker products for modern software deployment",
+    },
+    {
       title: "Runner-up at LLM x Law Hackathon",
       issuer: "Stanford Law School",
+      date: "",
       description: "Recognized for innovative legal tech application using large language models",
     },
     {
-      title: "Introduction to Cloud Computing",
-      issuer: "Udemy",
-      description: "Comprehensive certification in cloud computing fundamentals",
-    },
-    {
-      title: "Elite+ Silver Certificate - Internet of Things (IoT)",
+      title: "Elite+ Silver Certificate – Internet of Things (IoT)",
       issuer: "NPTEL",
+      date: "",
       description: "Advanced certification in IoT technologies and applications",
     },
     {
-      title: "Elite Certificate - Cloud Computing",
+      title: "Elite Certificate – Cloud Computing",
       issuer: "NPTEL",
+      date: "",
       description: "Certification in cloud computing technologies and best practices",
     },
   ];
@@ -157,7 +167,7 @@ export function Education() {
             </span>
           </motion.h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
@@ -186,7 +196,7 @@ export function Education() {
                     <h4 className="text-lg mb-1 group-hover:text-purple-400 transition-colors">
                       {cert.title}
                     </h4>
-                    <p className="text-sm text-white/60 mb-2 font-mono">{cert.issuer}</p>
+                    <p className="text-sm text-white/60 mb-1 font-mono">{cert.issuer}{cert.date ? ` · ${cert.date}` : ""}</p>
                     <p className="text-sm text-white/50">{cert.description}</p>
                   </div>
                 </div>

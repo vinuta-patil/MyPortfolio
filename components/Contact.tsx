@@ -35,8 +35,8 @@ export function Contact() {
     {
       Icon: Mail,
       label: "Email",
-      value: "vinuta.patil@sjsu.edu",
-      href: "mailto:vinuta.patil@sjsu.edu",
+      value: "vinutapatil07@gmail.com",
+      href: "mailto:vinutapatil07@gmail.com",
     },
     {
       Icon: Phone,
